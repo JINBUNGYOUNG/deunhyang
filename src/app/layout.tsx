@@ -1,3 +1,9 @@
+"use client" ;
+
+import Navigation from "../../components/navigation";
+import StyledComponentsRegistry from "../../lib/registry";
+import GlobalStyle from "./GlobalStyle";
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -6,7 +12,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-        {children}
+        <StyledComponentsRegistry>
+          <GlobalStyle/>
+          <Navigation/>
+          {children}
+        </StyledComponentsRegistry>
       </body>
     </html>
   );
