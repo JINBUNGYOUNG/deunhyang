@@ -4,6 +4,7 @@ import Image from "next/image";
 import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
 import styled from "styled-components";
+import GoogleLoginBtn from "../../../../components/googleLoginBtn";
 
 const MemberLogin = () => {
     const router = useRouter();
@@ -26,7 +27,7 @@ const MemberLogin = () => {
 
                         <p className="sub">아이디와 비밀번호 입력하기 귀찮으시죠?<br/>구글 계정으로 입력없이 간편하게 로그인 하세요.</p>
 
-                        {/* <GoogleLoginBtn type={'login'}/> */}
+                        <GoogleLoginBtn type={'login'}/>
 
                         <div className="or">
                             <div />
